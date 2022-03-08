@@ -1,11 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 project(alpha_interfaces)
 
-# Default to C99
-if(NOT CMAKE_C_STANDARD)
-  set(CMAKE_C_STANDARD 99)
-endif()
-
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -27,5 +22,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/StringToSpeech.srv"
 )
 
+ament_export_dependencies(rosidl_default_runtime)
 
 ament_package()
